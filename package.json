@@ -1,0 +1,25 @@
+{
+  "name": "daily_horo",
+  "version": "1.0.0",
+  "description": "Checking the daily horoscope from Vougue.in website for different Zodiac Signs",
+  "main": "index.js",
+  "scripts": {
+    "all-tests-in-dashboard": "npx cypress run --spec cypress/e2e/checkDailyHoro.js --record --key ca9ec51d-fc41-4cc4-b013-079ce1de42b0",
+    "all-tests-without-bdd": "npx cypress run --spec cypress/e2e/checkDailyHoro.js"
+  },
+  "keywords": [
+    "VOGUE"
+  ],
+  "author": "Abhishek Chauhan",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.16.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-multi-reporters": "^1.6.3",
+    "mocha-junit-reporter": "^2.2.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinations": "cypress/support/step_definations"
+  }
+}
