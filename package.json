@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "all-tests-in-dashboard": "npx cypress run --spec cypress/e2e/checkDailyHoro.js --record --key ca9ec51d-fc41-4cc4-b013-079ce1de42b0",
-    "all-tests-without-bdd": "npx cypress run --spec cypress/e2e/checkDailyHoro.js"
+    "all-tests-without-bdd": "npx cypress run --spec cypress/e2e/checkDailyHoro.js --record --key ca9ec51d-fc41-4cc4-b013-079ce1de42b0"
   },
   "keywords": [
     "VOGUE"
@@ -16,7 +16,10 @@
     "cypress": "^12.16.0",
     "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-multi-reporters": "^1.6.3",
-    "mocha-junit-reporter": "^2.2.0"
+    "mocha-junit-reporter": "^2.2.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,
