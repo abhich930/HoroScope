@@ -10,3 +10,6 @@ cypress/results
 
 # misc files, mostly outputs
 cypress/others
+
+# dont ignore yourself
+adding a much needed break :)
