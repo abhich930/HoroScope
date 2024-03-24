@@ -8,15 +8,17 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 describe("check daily horoscope based on your zodiac sign", () => {
     const vg = new vogue();
     before(() => {
+        cy.viewport(1920, 1080)
         cy.clearAllCookies()
         cy.clearAllLocalStorage()
-        cy.visit("https://www.vogue.in/")
+        cy.fixture('zodiacSign').then((testData) => {
+            globalThis.testData = testData
+        })
     })
     it("checking horo", () => {
-        let yourZS = 'Virgo'
-        cy.viewport(1920, 1080)
+        vg.visitHome()
         vg.burgerMenu();
-        vg.clickingOnDesiredDay()
-        vg.theHoro(yourZS)
+        vg.clickingOnDesiredDay(testData.yourZS)
+        cy.saveText(testData.yourZS) // --> Custom Command
     })
 })

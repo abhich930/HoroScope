@@ -23,3 +23,15 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('reachHoro', (date, zodiacSign) => {
+    cy.get('.category_tabs ul li a').contains('Sun Sign ').click({ force: true })
+    cy.get('.product-description a:visible').contains(zodiacSign +' Horoscope Today: '+date+', 2024').click({force:true})
+})
+
+Cypress.Commands.add('saveText', (zodiac) => {
+    cy.url().should('contain', '/product')
+    cy.get('.description.mb-20 p span').eq(0).then($text => {
+        const horoText = $text.text()
+        cy.writeFile('./cypress/others/Horoscope.txt', horoText)
+    })
+})
