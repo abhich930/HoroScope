@@ -2,7 +2,7 @@
 .DS_Store
 
 #npm files
-node_modules/
+node_modules
 package-lock.json
 
 # reports
@@ -10,3 +10,4 @@ cypress/results
 
 # misc files, mostly outputs
 cypress/others
+downloads
