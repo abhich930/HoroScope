@@ -6,6 +6,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
       on('file:preprocessor', cucumber())
+      require('cypress-mochawesome-reporter/plugin')(on)
     },
     specPattern: "cypress/e2e/**/*{js,jsx,ts,tsx,feature}",
     pageLoadTimeout: 180000,
@@ -15,9 +16,6 @@ module.exports = defineConfig({
     videoUploadOnPasses: false,
     screenshotOnRunFailure: false,
     chromeWebSecurity: false,
-    reporter: 'cypress-multi-reporters',
-    reporterOptions: {
-      configFile: 'reporter-config.json',
-    }
-  }
+  },
+  reporter: 'cypress-mochawesome-reporter'
 });

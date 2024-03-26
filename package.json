@@ -4,8 +4,8 @@
   "description": "Checking the daily horoscope from Vougue.in website for different Zodiac Signs",
   "main": "index.js",
   "scripts": {
-    "all-tests-in-dashboard": "npx cypress run --spec cypress/e2e/checkDailyHoro.js",
-    "all-tests-without-bdd": "npx cypress run --spec cypress/e2e/checkDailyHoro.js",
+    "all-tests-in-dashboard": "npx cypress run --spec cypress/e2e/checkDailyHoro.spec.js",
+    "all-tests-without-bdd": "npx cypress run --spec cypress/e2e/checkDailyHoro.spec.js",
     "all-test-with-bdd": "npx cypress run --spec cypress/e2e/checkHoro.feature"
   },
   "keywords": [
@@ -16,11 +16,7 @@
   "devDependencies": {
     "cypress": "^12.16.0",
     "cypress-cucumber-preprocessor": "^4.3.1",
-    "cypress-multi-reporters": "^1.6.3",
-    "mocha-junit-reporter": "^2.2.0",
-    "mochawesome": "^7.1.3",
-    "mochawesome-merge": "^4.3.0",
-    "mochawesome-report-generator": "^6.2.0"
+    "cypress-mochawesome-reporter": "^3.8.2"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,

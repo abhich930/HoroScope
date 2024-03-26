@@ -11,3 +11,4 @@ cypress/results
 # misc files, mostly outputs
 cypress/others
 downloads
+reports
