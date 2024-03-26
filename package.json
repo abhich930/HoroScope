@@ -4,8 +4,9 @@
   "description": "Checking the daily horoscope from Vougue.in website for different Zodiac Signs",
   "main": "index.js",
   "scripts": {
-    "all-tests-in-dashboard": "npx cypress run --spec cypress/e2e/checkDailyHoro.js --record --key ca9ec51d-fc41-4cc4-b013-079ce1de42b0",
-    "all-tests-without-bdd": "npx cypress run --spec cypress/e2e/checkDailyHoro.js --record --key ca9ec51d-fc41-4cc4-b013-079ce1de42b0"
+    "all-tests-in-dashboard": "npx cypress run --spec cypress/e2e/checkDailyHoro.js",
+    "all-tests-without-bdd": "npx cypress run --spec cypress/e2e/checkDailyHoro.js",
+    "all-test-with-bdd": "npx cypress run --spec cypress/e2e/checkHoro.feature"
   },
   "keywords": [
     "VOGUE"
@@ -23,6 +24,6 @@
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,
-    "stepDefinations": "cypress/support/step_definations"
+    "stepDefinitions": "cypress/support/step_definitions"
   }
 }
